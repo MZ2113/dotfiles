@@ -3,7 +3,6 @@
 ## 运行环境 
 * **Neovim 0.12.2** 
  
---- 
  
 ## 插件列表 
 * **lazy.nvim**: 插件管理 
@@ -15,7 +14,6 @@
 * **nvim-autopairs**: 自动括号配对 
 * **nvim-treesitter**: 语法高亮引擎 
  
---- 
  
 ## 自定义按键 (Keymaps) 
 * `jk`: 退出插入模式 (`Esc`) 
