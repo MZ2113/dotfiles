@@ -76,6 +76,8 @@ end)
 vim.keymap.set("n", "<leader>fb", function()
     require("telescope.builtin").buffers()
 end)
+-- nvim-tree 切换开关
+vim.keymap.set('n', '<C-b>', ':NvimTreeToggle<CR>', { silent = true, noremap = true })
 
 -- ========================
 -- 插件列表
@@ -226,4 +228,26 @@ require("lazy").setup({
             })
         end
     },
+    {
+      "nvim-tree/nvim-tree.lua",
+      version = "*",
+      lazy = false,
+      dependencies = {
+        "nvim-tree/nvim-web-devicons", -- 用于显示文件图标
+      },
+      config = function()
+        require("nvim-tree").setup({
+          sort_by = "case_sensitive",
+          view = {
+            width = 30, -- 侧边栏宽度
+          },
+          renderer = {
+            group_empty = true,
+          },
+          filters = {
+            dotfiles = false,
+          },
+        })
+      end,
+    }
  })
