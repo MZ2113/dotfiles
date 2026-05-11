@@ -249,5 +249,18 @@ require("lazy").setup({
           },
         })
       end,
-    }
- })
+    },
+    {	
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+	    require("lualine").setup({
+	        options = {
+		    theme = 'auto', -- 自动根据你的配色方案调整
+		    component_separators = { left = '', right = ''},
+		    section_separators = { left = '', right = ''},
+	        }
+	    })
+        end
+    },
+})
